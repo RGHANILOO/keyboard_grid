@@ -1,176 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF_8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <title>CSS grid based keyboard</title>
   </head>
   <body>
-    <div class="keyboard-container">
-        <div class="keyboard">
-            <!-- row 1 -->
-            <div class="key">
-                <div class="key_top">±</div>
-                <div class="key_bottom">§</div>
-            </div>
-            <div class="key">
-                <div class="key_top">!</div>
-                <div class="key-bottom">1</div>
-            </div>
-            <div class="key">
-                <div class="key_top">@</div>
-                <div class="key-bottom">2</div>
-            </div>
-            <div class="key">
-                <div class="key_top">#</div>
-                <div class="key-bottom">3</div>
-            </div>
-            <div class="key">
-                <div class="key_top">$</div>
-                <div class="key-bottom">4</div>
-            </div>
-            <div class="key">
-                <div class="key_top">%</div>
-                <div class="key-bottom">5</div>
-            </div>
-            <div class="key">
-                <div class="key_top">^</div>
-                <div class="key-bottom">6</div>
-            </div>
-            <div class="key">
-                <div class="key_top">&amp;</div>
-                <div class="key-bottom">7</div>
-            </div>
-            <div class="key">
-                <div class="key_top">*</div>
-                <div class="key-bottom">8</div>
-            </div>
-            <div class="key">
-                <div class="key_top">(</div>
-                <div class="key-bottom">9</div>
-            </div>
-            <div class="key">
-                <div class="key_top">)</div>
-                <div class="key-bottom">0</div>
-            </div>
-            <div class="key">
-                <div class="key_top">_</div>
-                <div class="key-bottom">-</div>
-            </div>
-            <div class="key">
-                <div class="key_top">+</div>
-                <div class="key-bottom">=</div>
-            </div>
-            <div class="key is-backspace">
-                <div class="key-bottom">&larr;</div>
-            </div>
-            <!-- row 2 -->
-            <div class="key is-tab">
-                <div class="key-bottom">&rarrb;</div>
-            </div>
-            <div class="key">Q</div>
-            <div class="key">W</div>
-            <div class="key">E</div>
-            <div class="key">R</div>
-            <div class="key">T</div>
-            <div class="key">Y</div>
-            <div class="key">U</div>
-            <div class="key">I</div>
-            <div class="key">O</div>
-            <div class="key">P</div>
-            <div class="key">
-                <div class="key_top">{</div>
-                <div class="key-bottom">[</div>
-            </div>
-            <div class="key">
-                <div class="key_top">}</div>
-                <div class="key-bottom">]</div>
-            </div>
-            <div class="key is-enter">
-                <div class="key_top">&larrhk;</div>
-                <div class="key-bottom"></div>
-            </div>
-            <!-- row 3 -->
-            <div class="key is-capslock"></div>
-            <div class="key">A</div>
-            <div class="key">S</div>
-            <div class="key">D</div>
-            <div class="key">F</div>
-            <div class="key">G</div>
-            <div class="key">H</div>
-            <div class="key">J</div>
-            <div class="key">K</div>
-            <div class="key">L</div>
-            <div class="key">
-                <div class="key_top">:</div>
-                <div class="key-bottom">;</div>
-            </div>
-            <div class="key">
-                <div class="key_top">"</div>
-                <div class="key-bottom">'</div>
-            </div>
-            <div class="key">
-                <div class="key_top">|</div>
-                <div class="key-bottom">\</div>
-            </div>
-            <!-- row 4 -->
-            <div class="key is_shift_left"></div>
-            <div class="key">
-                <div class="key_top">~</div>
-                <div class="key-bottom">`</div>
-            </div>
-            <div class="key">Z</div>
-            <div class="key">X</div>
-            <div class="key">C</div>
-            <div class="key">V</div>
-            <div class="key">B</div>
-            <div class="key">N</div>
-            <div class="key">M</div>
-            <div class="key">
-                <div class="key_top">&lt;</div>
-                <div class="key-bottom">,</div>
-            </div>
-            <div class="key">
-                <div class="key_top">&gt;</div>
-                <div class="key-bottom">.</div>
-            </div>
-            <div class="key">
-                <div class="key_top">?</div>
-                <div class="key-bottom">/</div>
-            </div>
-            <div class="key is_shift_right"></div>
-            <!-- row 5 -->
-            <div class="key is_left">  
-                <div class="key-bottom">fn</div>
-            </div>
-            <div class="key is_right">
-                <div class="key_bottom">Ctrl</div>
-            </div>
-            <div class="key">
-                <div class="key_top">alt</div>
-                <div class="key-bottom">option</div>
-            </div>
-            <div class="key is_command is_right">
-                <div class="key_bottom">Cmd</div>
-            </div>
-            <div class="key is_space"></div>
-            <div class="key is_command is_left">
-                <div class="key_bottom">Cmd</div>
-            </div>
-            <div class="key is-left">
-                <div class="key_top">alt</div>
-                <div class="key_bottom">option</div>
-
-            </div>
-            <div class="key">&ltrif;</div>
-            <div class="key is_arrow_up">&utrif;</div>
-            <div class="key is_arrow_down">&dtrif;</div>
-            <div class="key">&rtrif;</div>
-
-
-        </div>
-    </div>
+    <kbd class="keyboard_container">
+      <kbd class="keyboard">
+        <!-- row 1 -->
+        <kbd class="key">
+          <kbd class="key_top">±</kbd>
+          <kbd class="key_bottom">§</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">!</kbd>
+          <kbd class="key_bottom">1</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">@</kbd>
+          <kbd class="key_bottom">2</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">#</kbd>
+          <kbd class="key_bottom">3</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">$</kbd>
+          <kbd class="key_bottom">4</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">%</kbd>
+          <kbd class="key_bottom">5</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">^</kbd>
+          <kbd class="key_bottom">6</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">&amp;</kbd>
+          <kbd class="key_bottom">7</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">*</kbd>
+          <kbd class="key_bottom">8</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">(</kbd>
+          <kbd class="key_bottom">9</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">)</kbd>
+          <kbd class="key_bottom">0</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">_</kbd>
+          <kbd class="key_bottom">_</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">+</kbd>
+          <kbd class="key_bottom">=</kbd>
+        </kbd>
+        <kbd class="key is_backspace">
+          <kbd class="key_bottom">&larr;</kbd>
+        </kbd>
+        <!-- row 2 -->
+        <kbd class="key is_tab">
+          <kbd class="key_bottom">&rarrb;</kbd>
+        </kbd>
+        <kbd class="key">Q</kbd>
+        <kbd class="key">W</kbd>
+        <kbd class="key">E</kbd>
+        <kbd class="key">R</kbd>
+        <kbd class="key">T</kbd>
+        <kbd class="key">Y</kbd>
+        <kbd class="key">U</kbd>
+        <kbd class="key">I</kbd>
+        <kbd class="key">O</kbd>
+        <kbd class="key">P</kbd>
+        <kbd class="key">
+          <kbd class="key_top">{</kbd>
+          <kbd class="key_bottom">[</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">}</kbd>
+          <kbd class="key_bottom">]</kbd>
+        </kbd>
+        <kbd class="key is_enter">
+          <kbd class="key_top">&larrhk;</kbd>
+          <kbd class="key_bottom"></kbd>
+        </kbd>
+        <!-- row 3 -->
+        <kbd class="key is_capslock">&#8682;</kbd>
+        <kbd class="key">A</kbd>
+        <kbd class="key">S</kbd>
+        <kbd class="key">D</kbd>
+        <kbd class="key">F</kbd>
+        <kbd class="key">G</kbd>
+        <kbd class="key">H</kbd>
+        <kbd class="key">J</kbd>
+        <kbd class="key">K</kbd>
+        <kbd class="key">L</kbd>
+        <kbd class="key">
+          <kbd class="key_top">:</kbd>
+          <kbd class="key_bottom">;</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">"</kbd>
+          <kbd class="key_bottom">'</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">|</kbd>
+          <kbd class="key_bottom">\</kbd>
+        </kbd>
+        <!-- row 4 -->
+        <kbd class="key is_shift_left">&#8679;</kbd>
+        <kbd class="key">
+          <kbd class="key_top">~</kbd>
+          <kbd class="key_bottom">`</kbd>
+        </kbd>
+        <kbd class="key">Z</kbd>
+        <kbd class="key">X</kbd>
+        <kbd class="key">C</kbd>
+        <kbd class="key">V</kbd>
+        <kbd class="key">B</kbd>
+        <kbd class="key">N</kbd>
+        <kbd class="key">M</kbd>
+        <kbd class="key">
+          <kbd class="key_top">&lt;</kbd>
+          <kbd class="key_bottom">,</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">&gt;</kbd>
+          <kbd class="key_bottom">.</kbd>
+        </kbd>
+        <kbd class="key">
+          <kbd class="key_top">?</kbd>
+          <kbd class="key_bottom">/</kbd>
+        </kbd>
+        <kbd class="key is_shift_right">&#8679;</kbd>
+        <!-- row 5 -->
+        <kbd class="key is_left">
+          <kbd class="key_bottom">fn</kbd>
+        </kbd>
+        <kbd class="key is_right">
+          <kbd class="key_bottom">Ctrl</kbd>
+        </kbd>
+        <kbd class="key is_right">
+          <kbd class="key_top">&#8997;</kbd>
+          <kbd class="key_bottom">option</kbd>
+        </kbd>
+        <kbd class="key is_command is_right">
+          &#8984;
+          <kbd class="key_bottom">Cmd</kbd>
+        </kbd>
+        <kbd class="key is_space"></kbd>
+        <kbd class="key is_command is_left">
+          &#8984;
+          <kbd class="key_bottom">Cmd</kbd>
+        </kbd>
+        <kbd class="key is_left">
+          <kbd class="key_top">&#8997;</kbd>
+          <kbd class="key_bottom">option</kbd>
+        </kbd>
+        <kbd class="key">&ltrif;</kbd>
+        <kbd class="key is_arrow_up">&utrif;</kbd>
+        <kbd class="key is_arrow_down">&dtrif;</kbd>
+        <kbd class="key">&rtrif;</kbd>
+      </kbd>
+    </kbd>
     <script src="./index.js"></script>
   </body>
 </html>

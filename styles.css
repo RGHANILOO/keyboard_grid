@@ -1,0 +1,175 @@
+/* html{
+  color-scheme: light dark;
+} */
+/* Calculated colors */
+:root {
+  --color-key: rgba(0, 0, 0, 0.9);
+  --color-keyboard: rgba(0, 0, 0, 0.02);
+  --color-text: oklch(80% 0 0);
+}
+
+/* Constants */
+:root {
+  --key-radius: 10px;
+  --key-size: 70px;
+  --key-gutter: 5px;
+  --key-spacing-horizontal: 9px;
+  --key-spacing-vertical: 5px;
+  --keyboard-spacing: 16px;
+}
+
+/* Keyboard Styles */
+.keyboard_container {
+  display: flex;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+}
+
+.keyboard {
+  background-color: var(--color-keyboard);
+  color: var(--color-text);
+  display: grid;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  grid-template-columns: repeat(
+    58,
+    calc((var(--key-size) + var(--key-gutter)) / 4)
+  );
+  grid-template-rows: repeat(
+    10,
+    calc((var(--key-size) + var(--key-gutter)) / 2)
+  );
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding: var(--keyboard-spacing);
+  transform-origin: top left;
+}
+
+.key {
+  align-items: center;
+  background-color: var(--color-key);
+  border-radius: var(--key-radius);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  grid-column-end: span 4;
+  grid-row-end: span 2;
+  grid-template-columns: repeat(2, calc(var(--key-size) / 2));
+  grid-template-rows: repeat(2, calc(var(--key-size) / 2));
+  justify-content: center;
+  padding: var(--key-spacing-vertical) var(--key-spacing-horizontal);
+  margin: calc(var(--key-gutter) / 2);
+}
+
+/* Specific key classes */
+.is_arrow_down,
+.is_arrow_up {
+  grid-column-start: 51;
+  grid-row-end: span 1;
+}
+
+.is_arrow_down {
+  border-radius: 0 0 var(--key-radius) var(--key-radius);
+  grid-row-start: 10;
+  margin-top: calc(var(--key-gutter) / 4);
+}
+
+.is_arrow_up {
+  border-radius: var(--key-radius) var(--key-radius) 0 0;
+  grid-row-start: 9;
+  margin-bottom: calc(var(--key-gutter) / 4);
+}
+
+/* Add more specific key classes*/
+.is_backspace,
+.is_tab {
+  grid-column-end: span 6;
+}
+.is_backspace {
+  align-items: flex-end;
+}
+.is_capslock {
+  grid-column-end: span 7;
+}
+.is_command,
+.is_shift_left {
+  grid-column-end: span 5;
+}
+/* enter key */
+.key.is_enter {
+  grid-column-start: 56;
+  grid-column-end: span 3;
+  grid-row-end: span 4;
+  border-radius: 0 var(--key-radius) var(--key-radius) var(--key-radius);
+  position: relative;
+}
+.key.is_enter::before,
+.key.is_enter::after {
+  content: "";
+  position: absolute;
+}
+.key.is_enter::before {
+  background-color: var(--color-key);
+  border-radius: var(--key-radius) 0 0 var(--key-radius);
+  height: var(--key-size);
+  left: calc(-1 * var(--key-size) / 4);
+  top: 0;
+  width: calc(var(--key-size) / 4);
+}
+.key.is_enter::after {
+  border-top-right-radius: var(--key-radius);
+  box-shadow: calc(-1 * var(--key-gutter)) var(--key-gutter);
+  cursor: default;
+  height: calc(var(--key-gutter) * 2);
+  left: calc(-1 * var(--key-gutter));
+}
+.key.is_enter.key_top {
+  height: calc(var(--key-size)- (var(--key-spacing-vertical) * 2));
+}
+
+.is_left,
+.is_right {
+  font-size: 12px;
+  justify-content: space-between;
+  line-height: 20px;
+}
+.is_left {
+  align-items: flex-start;
+}
+.is_right {
+  align-items: flex-end;
+}
+.is_shift_right {
+  grid-column-end: span 9;
+}
+.is_space {
+  grid-column-end: span 20;
+}
+.is_tab {
+  align-items: flex-start;
+}
+
+/* Bottom and top key styles */
+.key_bottom,
+.key_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.key_bottom {
+  flex-grow: 1;
+}
+
+/* .keyboard{
+  transform: scale(1);
+} */
+@media screen and (max-width: 1200px) {
+  .keyboard{
+    transform: scale(calc(100vw/1200));
+  }
+  
+}
