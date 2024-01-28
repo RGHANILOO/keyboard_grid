@@ -10,26 +10,24 @@ keys.forEach(key => {
 
 // Step 3: Define Event Handlers
 function handleKeyPress(event) {
-    const keyPressed = event.key.toUpperCase();
+    const keyPressed = event.code;
     console.log(keyPressed);
     animateKey(keyPressed);
 }
 
 
 function handleKeyClick(event) {
-    const keyPressed = event.target.textContent.trim();
+    const keyPressed = event.currentTarget.dataset.code;
     console.log(keyPressed);
     animateKey(keyPressed);
 }
 
 function animateKey(keyPressed) {
-    const keyElements = document.querySelectorAll('.key');
-    keyElements.forEach(keyElement => {
-        if (keyElement.textContent.trim() === keyPressed) {
-            keyElement.classList.add('pressed');
-            setTimeout(() => {
-                keyElement.classList.remove('pressed');
-            }, 500); 
-        }
-    });
+    const keyElement = document.querySelector(`.key[data-code="${keyPressed}"]`);
+    if (keyElement) {
+        keyElement.classList.add('pressed');
+        setTimeout(() => {
+            keyElement.classList.remove('pressed');
+        }, 300);
+    }
 }
