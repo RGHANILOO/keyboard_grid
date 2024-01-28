@@ -163,10 +163,13 @@
 .key_bottom {
   flex-grow: 1;
 }
+.pressed{
+  border:3px solid red
+}
 
-/* .keyboard{
+.keyboard{
   transform: scale(1);
-} */
+}
 @media screen and (max-width: 1200px) {
   .keyboard{
     transform: scale(calc(100vw/1200));
