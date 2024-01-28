@@ -12,67 +12,14 @@ kbd
 cal  and the negative values on variable -1* var(--blah-blah)
 
 
-IntlBackslash
-Digit1
-Digit2
-Digit3
-Digit4
-Digit5
-Digit6
-Digit7
-Digit8
-Digit9
-Digit0
-Minus
-Equal
-Backspace
-Tab
-KeyW
-KeyE
-KeyR
-KeyT
-KeyY
-KeyU
-KeyI
-KeyO
-KeyP
-BracketLeft
-BracketRight
-Enter
-CapsLock
-KeyA
-KeyS
-KeyD
-KeyF
-KeyG
-KeyH
-KeyJ
-KeyK
-KeyL
-Semicolon
-Quote
-Backslash
-ShiftRight
-Slash
-Period
-Comma
-KeyM
-KeyN
-KeyB
-KeyV
-KeyC
-KeyX
-KeyZ
-Backquote
-ShiftLeft
-fn
-ControlLeft
-AltLeft
-MetaLeft
-Space
-MetaRight
-AltRight
-ArrowLeft
-ArrowDown
-ArrowUp
-ArrowRight
+#### event.target:
+
+    This property refers to the element that actually triggered the event. For example, if you have a click event listener attached to a parent <div> element, and you click on a child <span> element within that <div>, event.target will refer to the <span> element, which is the actual target of the click event.
+    This property is useful when you want to know exactly which element triggered the event, especially in cases where events bubble up through the DOM hierarchy.
+
+
+#### event.currentTarget:
+
+    This property refers to the element that the event handler is currently attached to. It does not change as the event bubbles up or down the DOM hierarchy. It always refers to the element to which the event listener was initially attached.
+    Unlike event.target, which may vary depending on where the event originated, event.currentTarget remains constant throughout the event handling process.
+    This property is useful when you want to refer to the specific element to which the event listener is attached, regardless of where the event originated within its descendants.
